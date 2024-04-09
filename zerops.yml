@@ -1,5 +1,5 @@
 zerops:
-  - setup: zeropsqwik
+  - setup: qwiknodejs
     build:
       base: nodejs@20
 
