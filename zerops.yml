@@ -1,5 +1,5 @@
 zerops:
-  - setup: nodejs0
+  - setup: zeropsqwik
     build:
       base: nodejs@20
 
@@ -11,10 +11,12 @@ zerops:
         - dist
         - package.json
         - node_modules
+        - public
+        - server
 
       cache:
         - node_modules
         - package-lock.json
 
     run:
-      start: npm start
+      start: npm run serve
