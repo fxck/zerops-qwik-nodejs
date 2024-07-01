@@ -1,22 +1,19 @@
 zerops:
-  - setup: qwiknodejs
+  - setup: app
     build:
       base: nodejs@20
-
       buildCommands:
-        - npm i
-        - npm run build
-
-      deploy:
+        - pnpm i
+        - pnpm run build
+      deployFiles:
         - dist
         - package.json
         - node_modules
         - public
         - server
-
-      cache:
-        - node_modules
-        - package-lock.json
-
     run:
-      start: npm run serve
+      base: nodejs@20
+      ports:
+        - port: 3000
+          httpSupport: true
+      start: pnpm start
