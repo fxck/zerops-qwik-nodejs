@@ -21,7 +21,7 @@ export default component$(() => {
       </div>
 
       <a
-        href="https://app.zerops.io/recipe/astro-nodejs"
+        href="https://app.zerops.io/recipe/qwik-nodejs"
         target="_blank"
         class="text-lg mt-10"
       >
