@@ -12,7 +12,7 @@ export default component$(() => {
           <span class="text-[#d2d7fc]">
             Powered by{" "}
             <a
-              href="https://www.builder.io/"
+              href="https://www.zerops.io/"
               target="_blank"
               class="hover:underline font-bold"
             >
