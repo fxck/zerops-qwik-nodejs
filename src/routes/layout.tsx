@@ -6,7 +6,6 @@ import Footer from "../components/starter/footer/footer";
 
 import styles from "./styles.css?inline";
 
-
 export const onGet: RequestHandler = async ({ cacheControl }) => {
   // Control caching for this request for best performance and to reduce hosting costs:
   // https://qwik.builder.io/docs/caching/
