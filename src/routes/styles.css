@@ -1,28 +1,23 @@
 /* THIS FILE IS JUST FOR EXAMPLES, DELETE IT IF YOU DON'T NEED IT */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-/* SHELL ---------------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
 html {
-  font-family:
-    ui-sans-serif,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
   background: var(--qwik-dark-background);
   color: var(--qwik-dark-text);
   overflow-x: hidden;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 /* HEADINGS ------------------------------------- */
@@ -34,7 +29,7 @@ h3 {
 }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   text-align: center;
 }
 h1 .highlight,
@@ -54,9 +49,14 @@ h3 {
   font-size: 2rem;
 }
 
+p {
+  color: #d2d7fc;
+}
+
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 5rem;
+    font-size: 3.9rem;
+    padding-bottom: 0.5em;
   }
   h2 {
     font-size: 3.4rem;
@@ -70,12 +70,6 @@ h3 {
 a {
   text-decoration: none;
   color: var(--qwik-light-blue);
-}
-
-code {
-  background: rgba(230, 230, 230, 0.3);
-  border-radius: 4px;
-  padding: 2px 6px;
 }
 
 ul {

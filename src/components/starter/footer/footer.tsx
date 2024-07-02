@@ -8,11 +8,11 @@ export default component$(() => {
   return (
     <footer>
       <div class="container">
-        <a href="https://www.builder.io/" target="_blank" class={styles.anchor}>
-          <span>Made with ♡ by Builder.io</span>
-          <span class={styles.spacer}>|</span>
-          <span>{serverTime.value.date}</span>
-        </a>
+        <span class={["text-[16px]",styles.anchor]}>
+          <span class="text-[#d2d7fc]">Powered by <a href="https://www.builder.io/" target="_blank" class="hover:underline font-bold">Zerops</a></span>
+          <span class={["text-[#d2d7fc]",styles.spacer]}>|</span>
+          <span class="text-[#d2d7fc]">{serverTime.value.date}</span>
+        </span>
       </div>
     </footer>
   );
