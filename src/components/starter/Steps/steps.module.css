@@ -14,11 +14,11 @@
 }
 
 .primarybutton:hover {
-  background-color: #065CC0;
+  background-color: #065cc0;
 }
 
 .zeropsbutton {
-  background-color: #065CC0;
+  background-color: #065cc0;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
@@ -28,11 +28,11 @@
   transition: 300ms;
 }
 .zeropsbutton:hover {
-  background-color: #0364D5;
+  background-color: #0364d5;
 }
 
 .discordbutton {
-  background-color: #0364D5;
+  background-color: #0364d5;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-top: 0.75rem;
@@ -47,9 +47,9 @@
 }
 
 .link {
-    color: #d2d7fc;
+  color: #d2d7fc;
 }
 
 .link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }

@@ -14,33 +14,35 @@ You can either click the deploy button to deploy directly on Zerops, or manually
 
 [![Deploy on Zerops](https://github.com/zeropsio/recipe-shared-assets/blob/main/deploy-button/green/deploy-button.svg)](https://app.zerops.io/recipe/qwik-nodejs)
 
-
 <br/>
 
 ## Recipe features
+
 - Latest version of **Qwik** with SSR running on a **Zerops Static** service.
 
 <br/>
 
 ## Production vs. development
+
 This recipe is ready for production as is, and will scale horizontally by adding more containers in case of high traffic surges. If you want to achieve the highest baseline reliability and resiliace, start with at least two containers (add `minContainers: 2` in recipe YAML in the `app` service section, or change the minimum containers in "Automatic Scaling configuration" section of service detail).
 
 <br/>
 
 ## Changes made over the default installation
+
 If you want to modify your existing Qwik app to efficiently run on Zerops, follow these steps:
 
 1. Install the necessary adapter with:
-    ```sh
+   `sh
     npm run qwik add express
-    ```
-Running this command will make the following changes
--  A `build.server` & `serve`  script will be automatically added to your package.json file.
+    `
+   Running this command will make the following changes
+
+- A `build.server` & `serve` script will be automatically added to your package.json file.
 - A `adapters/express/vite.config.ts` and `src/entry.express.tsx` will be created.
 - It will install the required dependencies for SSR.
 
 Now, just add the [zerops.yml](https://github.com/zeropsio/recipe-qwik-nodejs/blob/main/zerops.yml) file to the root of your project, and make sure to check `package.json` for the scripts.
-
 
 <br/>
 

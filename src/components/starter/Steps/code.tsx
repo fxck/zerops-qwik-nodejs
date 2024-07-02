@@ -1,4 +1,4 @@
-import { component$, $, useSignal } from '@builder.io/qwik';
+import { component$, $, useSignal } from "@builder.io/qwik";
 import styles from "./steps.module.css";
 
 const CopyIcon = (
@@ -40,38 +40,48 @@ interface CodeBlockProps {
   fileLink: string;
 }
 
-export const CodeBlock = component$<CodeBlockProps>(({ code, file, fileLink }) => {
-  const copied = useSignal(false); // Use useSignal to define reactive state
+export const CodeBlock = component$<CodeBlockProps>(
+  ({ code, file, fileLink }) => {
+    const copied = useSignal(false); // Use useSignal to define reactive state
 
-  const copy = $(async () => {
-    await navigator?.clipboard?.writeText(code);
-    copied.value = true; // Update copied.value to true
-    setTimeout(() => {
-      copied.value = false; // Reset copied.value to false after 2000 ms
-    }, 2000);
-  });
+    const copy = $(async () => {
+      await navigator?.clipboard?.writeText(code);
+      copied.value = true; // Update copied.value to true
+      setTimeout(() => {
+        copied.value = false; // Reset copied.value to false after 2000 ms
+      }, 2000);
+    });
 
-  return (
-    <span class="my-8 bg-[#0C4D98] h-full rounded-md ">
-      <a href={fileLink} target="_blank" class={["link flex justify-center py-1 text-sm font-medium", styles.link]}>
-        {file}
-      </a>
-      <div class="bg-[#123D6F] rounded-b-md h-full w-full  relative">
-                <button
-          onClick$={copy}
-          class={{ 
-            "absolute top-4 right-4 p-2 rounded-md bg-[#065CC0] hover:bg-[#0364D5] copybtn duration-300 text-white": true,
-            "": copied.value 
-          }}
+    return (
+      <span class="my-8 bg-[#0C4D98] h-full rounded-md ">
+        <a
+          href={fileLink}
+          target="_blank"
+          class={[
+            "link flex justify-center py-1 text-sm font-medium",
+            styles.link,
+          ]}
         >
-          {copied.value ? CheckIcon : CopyIcon}
-        </button>
-      <pre class="overflow-x-auto h-full p-8">
-
-        <code class="text-[#d2d7fc] bg-transparent text-sm font-medium  overflow-x-auto">{code}</code>
-      </pre>
-      </div>
-
-    </span>
-  );
-});
+          {file}
+        </a>
+        <div class="bg-[#123D6F] rounded-b-md h-full w-full  relative">
+          <button
+            onClick$={copy}
+            class={{
+              "absolute top-4 right-4 p-2 rounded-md bg-[#065CC0] hover:bg-[#0364D5] copybtn duration-300 text-white":
+                true,
+              "": copied.value,
+            }}
+          >
+            {copied.value ? CheckIcon : CopyIcon}
+          </button>
+          <pre class="overflow-x-auto h-full p-8">
+            <code class="text-[#d2d7fc] bg-transparent text-sm font-medium  overflow-x-auto">
+              {code}
+            </code>
+          </pre>
+        </div>
+      </span>
+    );
+  },
+);
